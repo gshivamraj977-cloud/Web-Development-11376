@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show / Hide & Toggle Class</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .box {
+            padding: 15px;
+            margin-top: 10px;
+            border: 2px solid #333;
+            background-color: #f2f2f2;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none;
+        }
+
+        /* Toggle style class */
+        .highlight {
+            background-color: yellow;
+            color: red;
+            font-weight: bold;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Show / Hide & Toggle CSS Class</h2>
+
+    <button onclick="showBox()">Show</button>
+    <button onclick="hideBox()">Hide</button>
+    <button onclick="toggleBox()">Toggle Show/Hide</button>
+    <button onclick="toggleStyle()">Toggle Style</button>
+
+    <div id="myBox" class="box">
+        This content can be shown or hidden.
+    </div>
+
+    <script>
+        // Show element
+        function showBox() {
+            document.getElementById("myBox").classList.remove("hidden");
+        }
+
+        // Hide element
+        function hideBox() {
+            document.getElementById("myBox").classList.add("hidden");
+        }
+
+        // Toggle show/hide
+        function toggleBox() {
+            document.getElementById("myBox").classList.toggle("hidden");
+        }
+
+        // Toggle CSS class
+        function toggleStyle() {
+            document.getElementById("myBox").classList.toggle("highlight");
+        }
+    </script>
+
+</body>
+</html>

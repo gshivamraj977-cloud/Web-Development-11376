@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Conditions and Loops</title>
+</head>
+<body>
+
+<h2>Check Console for Output</h2>
+
+<script>
+    /* 🔹 CONDITIONAL STATEMENTS */
+
+    let number = 7;
+
+    // if statement
+    if (number > 0) {
+        console.log("The number is positive");
+    }
+
+    // if-else statement
+    if (number % 2 === 0) {
+        console.log("The number is even");
+    } else {
+        console.log("The number is odd");
+    }
+
+    // if-else if ladder
+    let marks = 75;
+
+    if (marks >= 90) {
+        console.log("Grade: A");
+    } else if (marks >= 60) {
+        console.log("Grade: B");
+    } else {
+        console.log("Grade: C");
+    }
+
+    /* 🔁 LOOPING STATEMENTS */
+
+    // for loop
+    console.log("For Loop Output:");
+    for (let i = 1; i <= 5; i++) {
+        console.log(i);
+    }
+
+    // while loop
+    console.log("While Loop Output:");
+    let j = 1;
+    while (j <= 5) {
+        console.log(j);
+        j++;
+    }
+
+    // do...while loop
+    console.log("Do While Loop Output:");
+    let k = 1;
+    do {
+        console.log(k);
+        k++;
+    } while (k <= 5);
+
+</script>
+
+</body>
+</html>

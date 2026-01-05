@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .box {
+            padding: 15px;
+            margin-top: 10px;
+            border: 2px solid #333;
+        }
+        button {
+            margin: 5px;
+            padding: 8px 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 id="title">DOM Manipulation Example</h2>
+
+    <p class="message">This is the original message.</p>
+
+    <div id="content" class="box">
+        Initial content inside the div.
+    </div>
+
+    <button onclick="changeById()">Change using getElementById()</button>
+    <button onclick="changeByQuery()">Change using querySelector()</button>
+    <button onclick="changeHTML()">Change using innerHTML</button>
+
+    <script>
+        // 1️⃣ Using getElementById()
+        function changeById() {
+            let heading = document.getElementById("title");
+            heading.style.color = "blue";
+            heading.innerHTML = "Changed using getElementById()";
+        }
+
+        // 2️⃣ Using querySelector()
+        function changeByQuery() {
+            let para = document.querySelector(".message");
+            para.style.color = "green";
+            para.innerHTML = "Changed using querySelector()";
+        }
+
+        // 3️⃣ Using innerHTML
+        function changeHTML() {
+            let box = document.getElementById("content");
+            box.innerHTML = "<strong>Content updated!</strong><br>This text was added using innerHTML.";
+            box.style.backgroundColor = "#f0f0f0";
+        }
+    </script>
+
+</body>
+</html>

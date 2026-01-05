@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions and Scope Demo</title>
+</head>
+<body>
+
+<h2>Open Console to See Output</h2>
+
+<script>
+    /* 🔹 USER-DEFINED FUNCTION */
+
+    function greet(name) {
+        console.log("Hello, " + name);
+    }
+
+    // Invoking the function
+    greet("Shashikant");
+
+
+    /* 🔹 FUNCTION WITH RETURN VALUE */
+
+    function add(a, b) {
+        return a + b;
+    }
+
+    let sum = add(5, 3);
+    console.log("Sum:", sum);
+
+
+    /* 🔹 SCOPE DEMONSTRATION */
+
+    function scopeExample() {
+
+        // var → function scope
+        var x = 10;
+
+        // let → block scope
+        let y = 20;
+
+        // const → block scope (cannot be reassigned)
+        const z = 30;
+
+        if (true) {
+            var x = 100;   // same variable (function scope)
+            let y = 200;   // new variable (block scope)
+            const z = 300; // new variable (block scope)
+
+            console.log("Inside block:");
+            console.log("var x =", x);
+            console.log("let y =", y);
+            console.log("const z =", z);
+        }
+
+        console.log("Outside block:");
+        console.log("var x =", x);
+        console.log("let y =", y);
+        console.log("const z =", z);
+    }
+
+    // Invoke function
+    scopeExample();
+
+</script>
+
+</body>
+</html>

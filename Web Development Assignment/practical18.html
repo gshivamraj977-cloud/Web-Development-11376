@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create & Manipulate DOM Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        ul {
+            margin-top: 15px;
+        }
+        li {
+            padding: 6px;
+            margin: 5px 0;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+        }
+        button {
+            margin-right: 10px;
+            padding: 6px 12px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>DOM Create, Append, Remove & Modify</h2>
+
+<button onclick="addItem()">Add Item</button>
+<button onclick="removeItem()">Remove Last Item</button>
+<button onclick="modifyItem()">Modify First Item</button>
+
+<ul id="itemList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ul>
+
+<script>
+    // Append (create + add)
+    function addItem() {
+        let newItem = document.createElement("li");
+        newItem.innerText = "New Item";
+        document.getElementById("itemList").appendChild(newItem);
+    }
+
+    // Remove child
+    function removeItem() {
+        let list = document.getElementById("itemList");
+        if (list.lastElementChild) {
+            list.removeChild(list.lastElementChild);
+        }
+    }
+
+    // Modify child
+    function modifyItem() {
+        let firstItem = document.querySelector("#itemList li");
+        if (firstItem) {
+            firstItem.innerText = "Modified Item";
+            firstItem.style.backgroundColor = "lightgreen";
+        }
+    }
+</script>
+
+</body>
+</html>
